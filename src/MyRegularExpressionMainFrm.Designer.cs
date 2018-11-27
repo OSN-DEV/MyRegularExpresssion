@@ -25,14 +25,14 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyRegularExpressionMainFrm));
-            this.cExpressionBackground = new MyLib.ComponentEx.PannelEx(this.components);
-            this.cExpression = new MyLib.ComponentEx.TextBoxEx(this.components);
-            this.cTargetBackground = new MyLib.ComponentEx.PannelEx(this.components);
-            this.cTarget = new MyLib.ComponentEx.RichTextBoxEx(this.components);
-            this.cResultBackground = new MyLib.ComponentEx.PannelEx(this.components);
-            this.cResult = new MyLib.ComponentEx.RichTextBoxEx(this.components);
-            this.cGroupBackground = new MyLib.ComponentEx.PannelEx(this.components);
-            this.cGroup = new MyLib.ComponentEx.TextBoxEx(this.components);
+            this.cExpressionBackground = new MyLib.WF.Component.PannelEx(this.components);
+            this.cExpression = new MyLib.WF.Component.TextBoxEx(this.components);
+            this.cTargetBackground = new MyLib.WF.Component.PannelEx(this.components);
+            this.cTarget = new MyLib.WF.Component.RichTextBoxEx(this.components);
+            this.cResultBackground = new MyLib.WF.Component.PannelEx(this.components);
+            this.cResult = new MyLib.WF.Component.RichTextBoxEx(this.components);
+            this.cGroupBackground = new MyLib.WF.Component.PannelEx(this.components);
+            this.cGroup = new MyLib.WF.Component.TextBoxEx(this.components);
             this.cExpressionBackground.SuspendLayout();
             this.cTargetBackground.SuspendLayout();
             this.cResultBackground.SuspendLayout();
@@ -153,13 +153,13 @@
         }
 
         #endregion
-        private MyLib.ComponentEx.PannelEx cExpressionBackground;
-        private MyLib.ComponentEx.TextBoxEx cExpression;
-        private MyLib.ComponentEx.PannelEx cTargetBackground;
-        private MyLib.ComponentEx.RichTextBoxEx cTarget;
-        private MyLib.ComponentEx.PannelEx cResultBackground;
-        private MyLib.ComponentEx.RichTextBoxEx cResult;
-        private MyLib.ComponentEx.PannelEx cGroupBackground;
-        private MyLib.ComponentEx.TextBoxEx cGroup;
+        private MyLib.WF.Component.PannelEx cExpressionBackground;
+        private MyLib.WF.Component.TextBoxEx cExpression;
+        private MyLib.WF.Component.PannelEx cTargetBackground;
+        private MyLib.WF.Component.RichTextBoxEx cTarget;
+        private MyLib.WF.Component.PannelEx cResultBackground;
+        private MyLib.WF.Component.RichTextBoxEx cResult;
+        private MyLib.WF.Component.PannelEx cGroupBackground;
+        private MyLib.WF.Component.TextBoxEx cGroup;
     }
 }
