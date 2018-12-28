@@ -135,12 +135,14 @@
             this.Controls.Add(this.cExpressionBackground);
             this.Font = new System.Drawing.Font("Meiryo UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(342, 317);
             this.Name = "MyRegularExpressionMainFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "正規表現確認";
             this.Load += new System.EventHandler(this.MyRegularExpressionMainFrm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MyRegularExpressionMainFrm_KeyDown);
             this.Resize += new System.EventHandler(this.MyRegularExpressionMainFrm_Resize);
             this.cExpressionBackground.ResumeLayout(false);
             this.cExpressionBackground.PerformLayout();

@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -15,6 +16,7 @@ namespace MyRegularExpressionTest {
             public const int Margin = 10;
             public const int Offset = 12;
         }
+        private List<string> _groupValue = new List<string>();
         #endregion
 
         #region Constructor
@@ -39,6 +41,13 @@ namespace MyRegularExpressionTest {
             }
 
         }
+
+        private void MyRegularExpressionMainFrm_KeyDown(object sender, KeyEventArgs e) {
+            if ((e.Modifiers & Keys.Control) == Keys.Control && e.KeyCode == Keys.C) {
+                Clipboard.SetText(string.Join("\n", this._groupValue));
+            }
+        }
+
         private void MyRegularExpressionMainFrm_Resize(object sender, EventArgs e) {
             this.adjustControl();
         }
@@ -92,6 +101,7 @@ namespace MyRegularExpressionTest {
         /// show result
         /// </summary>
         private void showResult() {
+            this._groupValue.Clear();
             this.cResult.Select(0, this.cResult.Text.Length);
             this.cResult.SelectionBackColor = Color.White;
             this.cResult.SelectionColor = Color.Black;
@@ -128,6 +138,7 @@ namespace MyRegularExpressionTest {
                                 int pos = this.cResult.SelectedText.IndexOf(groupVal);
                                 this.cResult.Select(readSize + match.Index + pos, groupVal.Length);
                                 this.cResult.SelectionColor = Color.Red;
+                                this._groupValue.Add(this.cResult.Text.Substring(readSize + match.Index + pos, groupVal.Length));
                             }
                         }
                         index++;
